@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria Atlas · Exposições de Arte</title>
+  <meta name="description" content="Galeria Atlas: exposições de pintura, fotografia, escultura e arte digital.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="wrap">
+      <a href="#inicio" class="logo">Galeria <span>Atlas</span></a>
+      <button id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+      <nav id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Em cartaz · Outubro 2026</p>
+          <h1>A arte em <em>movimento</em>, a um clique de você.</h1>
+          <p class="lead">Explore seis exposições de pintura, fotografia, escultura, desenho, instalação e arte digital, e veja cada obra em detalhe.</p>
+          <div class="acoes">
+            <a class="btn" href="#galeria">Ver a galeria</a>
+          </div>
+        </div>
+        <!-- Colagem do topo: imagens vêm do S3 (link em js/config.js) -->
+        <div class="colagem" id="colagem"></div>
+      </div>
+    </section>
+
+    <section class="bloco" id="galeria">
+      <div class="wrap">
+        <div class="cab">
+          <div><p class="eyebrow">Acervo</p><h2>Todas as imagens</h2></div>
+        </div>
+        <p class="dica">Clique em uma imagem para ampliar. Use as setas do teclado para navegar.</p>
+
+        <div class="filtros">
+          <div class="chips" id="chips-exp" role="group" aria-label="Filtrar por exposição"></div>
+          <span class="contador" id="contador"></span>
+        </div>
+
+        <!-- Galeria: as 35 imagens vêm do S3 (link em js/config.js, nomes em js/data.js) -->
+        <div class="mosaico" id="mosaico"></div>
+      </div>
+    </section>
+
+    <section class="bloco" id="sobre">
+      <div class="wrap">
+        <div class="cols">
+          <div class="info"><h3>Acervo diverso</h3><p>Seis linguagens artísticas em salas pensadas para cada tipo de obra.</p></div>
+          <div class="info"><h3>Entrada acessível</h3><p>Espaços adaptados e visitas guiadas gratuitas às quartas-feiras.</p></div>
+          <div class="info"><h3>Para todas as idades</h3><p>Oficinas e roteiros educativos para escolas e famílias.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span id="ano"></span> Galeria Atlas</span><span>Projeto CONUV · UniSENAI SP</span></div></footer>
+
+  <!-- ============================================================
+       LINK DO AWS S3: configure em  js/config.js  (S3_BASE_URL)
+       NOMES DAS IMAGENS: lista em  js/data.js
+       ============================================================ -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
