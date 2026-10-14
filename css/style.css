@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap");
 
 :root {
-  /* Paleta de Cores - Galeria Moderna */
-  --bg: #f8f7f4; /* Off-white suave */
-  --panel: #ffffff;
-  --texto: #1a1a1a;
-  --suave: #666666;
-  --linha: #e0e0e0;
-  --acento: #d65a3a; /* Terracota */
-  --ouro: #b88a2e;
+  /* Paleta de Cores - Galeria de Arte Moderna */
+  --bg: #f9f8f6;          /* Off-white levemente quente */
+  --panel: #ffffff;       /* Branco puro para os cards */
+  --texto: #1c1c1c;       /* Quase preto para leitura confortável */
+  --suave: #6b6b6b;       /* Cinza médio para textos secundários */
+  --linha: #e8e6e1;       /* Linhas divisórias sutis */
+  --acento: #c85a3a;      /* Terracota vibrante */
+  --ouro: #a67c2e;        /* Dourado envelhecido */
   
   --serif: "Fraunces", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { 
   scroll-behavior: smooth; 
@@ -30,7 +30,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 
 .wrap { 
   width: min(1200px, 100% - 40px); 
@@ -47,7 +47,7 @@ header.topo {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(248, 247, 244, 0.95);
+  background: rgba(249, 248, 246, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--linha);
 }
@@ -73,7 +73,6 @@ nav ul {
   display: flex;
   gap: 24px;
   list-style: none;
-  padding: 0;
   flex-wrap: wrap;
 }
 
@@ -150,6 +149,7 @@ nav a:hover::after { width: 100%; }
   color: #fff;
   transition: all 0.3s ease;
   border: 1px solid var(--texto);
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -181,12 +181,13 @@ h2 {
   font-size: 1.05rem;
 }
 
-/* ===== Mosaico Grid (Masonry) ===== */
+/* ===== Mosaico Grid (Masonry Real) ===== */
 .mosaico {
   display: grid;
+  /* Cria colunas responsivas. O segredo do masonry está no grid-auto-rows */
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
-  grid-auto-rows: 20px; /* Base para o span */
+  grid-auto-rows: 10px; /* Base para o cálculo do span */
 }
 
 .obra {
@@ -196,9 +197,15 @@ h2 {
   background: var(--panel);
   box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  /* O item ocupa 1 coluna e o span vertical é definido pelo JS ou por aspect-ratio */
+  grid-row: span 30; /* Valor padrão, será ajustado */
 }
+
+/* Ajuste de proporções para simular o masonry sem JS */
+/* Usamos aspect-ratio para forçar alturas variadas */
+.obra:nth-child(3n+1) { grid-row: span 38; } /* Mais alta */
+.obra:nth-child(3n+2) { grid-row: span 28; } /* Média */
+.obra:nth-child(3n+3) { grid-row: span 32; } /* Padrão */
 
 .obra:hover {
   transform: translateY(-4px);
@@ -307,6 +314,8 @@ footer .wrap {
 
 @media (max-width: 480px) {
   .mosaico { grid-template-columns: 1fr; }
+  /* Em telas muito pequenas, forçamos uma altura uniforme para não quebrar o layout */
+  .obra { grid-row: span 30 !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
