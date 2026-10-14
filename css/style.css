@@ -1,46 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap");
 
 :root {
-  /* Paleta de Cores - Galeria de Arte Moderna */
-  --bg: #f9f8f6;          /* Off-white levemente quente */
-  --panel: #ffffff;       /* Branco puro para os cards */
-  --texto: #1c1c1c;       /* Quase preto para leitura confortável */
-  --suave: #6b6b6b;       /* Cinza médio para textos secundários */
-  --linha: #e8e6e1;       /* Linhas divisórias sutis */
-  --acento: #c85a3a;      /* Terracota vibrante */
-  --ouro: #a67c2e;        /* Dourado envelhecido */
-  
+  --bg: #f9f8f6;
+  --panel: #ffffff;
+  --texto: #1c1c1c;
+  --suave: #6b6b6b;
+  --linha: #e8e6e1;
+  --acento: #c85a3a;
+  --ouro: #a67c2e;
   --serif: "Fraunces", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { 
-  scroll-behavior: smooth; 
-  scroll-padding-top: 100px; 
-}
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 
-body { 
-  background: var(--bg); 
-  color: var(--texto); 
-  font-family: var(--sans); 
-  line-height: 1.6; 
+body {
+  background: var(--bg);
+  color: var(--texto);
+  font-family: var(--sans);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
 
-.wrap { 
-  width: min(1200px, 100% - 40px); 
-  margin-inline: auto; 
-}
+.wrap { width: min(1200px, 100% - 40px); margin-inline: auto; }
 
-:focus-visible { 
-  outline: 2px solid var(--acento); 
-  outline-offset: 3px; 
-}
+:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
 
 /* ===== Cabeçalho ===== */
 header.topo {
@@ -60,134 +49,46 @@ header.topo {
   gap: 20px;
 }
 
-.logo {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--texto);
-}
+.logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; }
 .logo span { color: var(--acento); }
 
-nav ul {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  flex-wrap: wrap;
-}
+nav ul { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
 
-nav a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--suave);
-  transition: color 0.2s;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--acento);
-  transition: width 0.3s ease;
-}
-
+nav a { font-size: 0.9rem; font-weight: 500; color: var(--suave); transition: color 0.2s; position: relative; }
+nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--acento); transition: width 0.3s ease; }
 nav a:hover { color: var(--texto); }
 nav a:hover::after { width: 100%; }
 
 /* ===== Hero ===== */
-.hero {
-  padding: 100px 0 80px;
-  text-align: center;
-  background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
-}
-
-.eyebrow {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--ouro);
-  font-weight: 600;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.hero h1 {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 1.1;
-  margin: 0 auto 24px;
-  max-width: 20ch;
-  color: var(--texto);
-}
-
-.hero h1 em {
-  color: var(--acento);
-  font-style: italic;
-}
-
-.lead {
-  max-width: 60ch;
-  margin: 0 auto;
-  color: var(--suave);
-  font-size: 1.15rem;
-}
-
+.hero { padding: 100px 0 80px; text-align: center; background: linear-gradient(180deg, #fff 0%, var(--bg) 100%); }
+.eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ouro); font-weight: 600; margin-bottom: 12px; display: block; }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin: 0 auto 24px; max-width: 20ch; }
+.hero h1 em { color: var(--acento); font-style: italic; }
+.lead { max-width: 60ch; margin: 0 auto; color: var(--suave); font-size: 1.15rem; }
 .acoes { margin-top: 40px; }
 
 .btn {
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  background: var(--texto);
-  color: #fff;
-  transition: all 0.3s ease;
-  border: 1px solid var(--texto);
-  cursor: pointer;
+  display: inline-block; padding: 14px 32px; border-radius: 999px; font-weight: 600; font-size: 0.95rem;
+  background: var(--texto); color: #fff; transition: all 0.3s ease; border: 1px solid var(--texto); cursor: pointer;
 }
-
-.btn:hover {
-  background: transparent;
-  color: var(--texto);
-  transform: translateY(-2px);
-}
+.btn:hover { background: transparent; color: var(--texto); transform: translateY(-2px); }
 
 /* ===== Seções de Exposição ===== */
-section.bloco {
-  padding: 60px 0;
-  border-top: 1px solid var(--linha);
-}
-
+section.bloco { padding: 60px 0; border-top: 1px solid var(--linha); }
 .cab { margin-bottom: 12px; }
+h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 4px; }
+.desc { color: var(--suave); max-width: 65ch; margin-bottom: 40px; font-size: 1.05rem; }
 
-h2 {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--texto);
-  margin-top: 4px;
-}
-
-.desc {
-  color: var(--suave);
-  max-width: 65ch;
-  margin-bottom: 40px;
-  font-size: 1.05rem;
-}
-
-/* ===== Mosaico Grid (Masonry Real) ===== */
+/* ============================================================
+   CORREÇÃO DO MOSAICO (O SEGREDO ESTÁ AQUI)
+   ============================================================ */
 .mosaico {
-  display: grid;
-  /* Cria colunas responsivas. O segredo do masonry está no grid-auto-rows */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* Usamos Flexbox para permitir que as imagens fluam naturalmente */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  grid-auto-rows: 10px; /* Base para o cálculo do span */
+  /* Centraliza os itens para que a última linha não fique "torta" */
+  justify-content: center;
 }
 
 .obra {
@@ -197,15 +98,30 @@ h2 {
   background: var(--panel);
   box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* O item ocupa 1 coluna e o span vertical é definido pelo JS ou por aspect-ratio */
-  grid-row: span 30; /* Valor padrão, será ajustado */
+  
+  /* Definimos uma largura base flexível. O Flexbox cuida do resto. */
+  flex: 1 1 280px;
+  max-width: 100%;
+  
+  /* Altura definida para manter a proporção, mas o object-fit garante que não distorça */
+  height: 300px; 
+  margin: 0;
 }
 
-/* Ajuste de proporções para simular o masonry sem JS */
-/* Usamos aspect-ratio para forçar alturas variadas */
-.obra:nth-child(3n+1) { grid-row: span 38; } /* Mais alta */
-.obra:nth-child(3n+2) { grid-row: span 28; } /* Média */
-.obra:nth-child(3n+3) { grid-row: span 32; } /* Padrão */
+/* Variação de alturas para criar o efeito visual dinâmico */
+.obra:nth-child(3n+1) { height: 380px; } /* Alta */
+.obra:nth-child(3n+2) { height: 280px; } /* Média */
+.obra:nth-child(3n+3) { height: 320px; } /* Padrão */
+
+/* Em telas médias, ajustamos as alturas para não ficar gigante */
+@media (max-width: 900px) {
+  .obra { height: 250px !important; }
+}
+
+/* Em telas pequenas, forçamos uma altura confortável */
+@media (max-width: 600px) {
+  .obra { height: 220px !important; flex: 1 1 100%; }
+}
 
 .obra:hover {
   transform: translateY(-4px);
@@ -215,7 +131,7 @@ h2 {
 .obra img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* A mágica acontece aqui: corta a imagem para preencher sem distorcer */
   display: block;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -236,86 +152,29 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.obra:hover figcaption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.obra figcaption b {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.obra figcaption span {
-  font-size: 0.8rem;
-  color: var(--ouro);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 4px;
-}
+.obra:hover figcaption { opacity: 1; transform: translateY(0); }
+.obra figcaption b { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; line-height: 1.2; }
+.obra figcaption span { font-size: 0.8rem; color: var(--ouro); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
 
 /* ===== Sobre ===== */
-.cols {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.info {
-  background: var(--panel);
-  border: 1px solid var(--linha);
-  border-radius: 16px;
-  padding: 32px;
-  transition: border-color 0.3s;
-}
-
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.info { background: var(--panel); border: 1px solid var(--linha); border-radius: 16px; padding: 32px; transition: border-color 0.3s; }
 .info:hover { border-color: var(--acento); }
-
-.info h3 {
-  font-family: var(--serif);
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: var(--texto);
-}
-
-.info p {
-  color: var(--suave);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
+.info h3 { font-family: var(--serif); font-size: 1.3rem; margin-bottom: 12px; }
+.info p { color: var(--suave); font-size: 0.95rem; line-height: 1.7; }
 
 /* ===== Rodapé ===== */
-footer {
-  border-top: 1px solid var(--linha);
-  padding: 40px 0;
-  color: var(--suave);
-  font-size: 0.9rem;
-  background: #fff;
-}
+footer { border-top: 1px solid var(--linha); padding: 40px 0; color: var(--suave); font-size: 0.9rem; background: #fff; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
-footer .wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* ===== Responsividade ===== */
+/* ===== Responsividade do Cabeçalho ===== */
 @media (max-width: 768px) {
   .topo .wrap { flex-direction: column; padding: 12px 0; gap: 12px; }
   nav ul { justify-content: center; gap: 12px 18px; }
   .hero { padding: 60px 0 40px; }
   .hero h1 { font-size: 2.2rem; }
-  .mosaico { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  /* No mobile, mostramos as legendas sempre para facilitar a leitura */
   .obra figcaption { opacity: 1; transform: translateY(0); background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); }
-}
-
-@media (max-width: 480px) {
-  .mosaico { grid-template-columns: 1fr; }
-  /* Em telas muito pequenas, forçamos uma altura uniforme para não quebrar o layout */
-  .obra { grid-row: span 30 !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
