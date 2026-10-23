@@ -11,16 +11,17 @@
 
   <header class="topo">
     <div class="wrap">
-      <a href="#inicio" class="logo">Galeria <span>Atlas</span></a>
-      <nav aria-label="Principal">
+      <a href="index.html" class="logo">Galeria <span>Atlas</span></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" aria-label="Principal">
         <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/luz_e_sombra.jpg">Luz e Sombra</a></li>
-          <li><a href="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/cores_do_sertao.jpg">Cores do Sertão</a></li>
-          <li><a href="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/materia_viva.jpg">Matéria Viva</a></li>
-          <li><a href="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/pixels_e_pigmentos.jpg">Pixels e Pigmentos</a></li>
-          <li><a href="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/memoria_do_traso.jpg">Memória do Traço</a></li>
-          <li><a href="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/entre_fios.jpg">Entre Fios</a></li>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="luz-e-sombra.html">Fotografia</a></li>
+          <li><a href="cores-do-sertao.html">Pintura</a></li>
+          <li><a href="materia-viva.html">Escultura</a></li>
+          <li><a href="pixels-e-pigmentos.html">Arte Digital</a></li>
+          <li><a href="memoria-do-traco.html">Desenho</a></li>
+          <li><a href="entre-fios.html">Instalação</a></li>
         </ul>
       </nav>
     </div>
@@ -31,222 +32,75 @@
       <div class="wrap">
         <p class="eyebrow">Em cartaz · Outubro 2026</p>
         <h1>A arte em <em>movimento</em>, a um clique de você.</h1>
-        <p class="lead">Explore seis exposições de fotografia, pintura, escultura, arte digital, desenho e instalação, com 35 imagens para ver em detalhe.</p>
+        <p class="lead">Explore seis exposições de fotografia, pintura, escultura, arte digital, desenho e instalação, com imagens para ver em detalhe.</p>
         <div class="acoes">
-          <a class="btn" href="#exposicao-1">Ver as exposições</a>
+          <a class="btn" href="#exposicoes">Ver as exposições</a>
+          <a class="btn sec" href="#sobre">Sobre a galeria</a>
         </div>
       </div>
     </section>
 
-
-    <!-- ===== EXPOSIÇÃO 1: Luz e Sombra ===== -->
-    <section class="bloco" id="exposicao-1">
+    <section class="bloco" id="exposicoes">
       <div class="wrap">
-        <div class="cab">
-          <div><p class="eyebrow">Fotografia · Marina Teixeira</p><h2>Luz e Sombra</h2></div>
-        </div>
-        <p class="desc">Ensaio fotográfico sobre o contraste urbano em São Paulo ao longo de um ano.</p>
-        <div class="mosaico">
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/luz_e_sombra.jpg" alt="Capa da exposição Luz e Sombra" loading="lazy">
-            <figcaption><b>Capa: Luz e Sombra</b><span>Marina Teixeira</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/viaduto.jpg" alt="Viaduto ao amanhecer" loading="lazy">
-            <figcaption><b>Viaduto ao amanhecer</b><span>Luz e Sombra</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/janela_14.jpg" alt="Janela 14" loading="lazy">
-            <figcaption><b>Janela 14</b><span>Luz e Sombra</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/reflexo.jpg" alt="Reflexo na Paulista" loading="lazy">
-            <figcaption><b>Reflexo na Paulista</b><span>Luz e Sombra</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/sombra_longa.jpg" alt="Sombra longa" loading="lazy">
-            <figcaption><b>Sombra longa</b><span>Luz e Sombra</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/3.jpg" alt="Esquina iluminada" loading="lazy">
-            <figcaption><b>Esquina iluminada</b><span>Luz e Sombra</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+        <p class="eyebrow">Em cartaz</p>
+        <h2>Nossas exposições</h2>
+        <p class="desc">Cada exposição tem uma página própria, dedicada à sua linguagem artística. Escolha uma para ver todas as obras.</p>
 
-    <!-- ===== EXPOSIÇÃO 2: Cores do Sertão ===== -->
-    <section class="bloco" id="exposicao-2">
-      <div class="wrap">
-        <div class="cab">
-          <div><p class="eyebrow">Pintura · Rafael Nogueira</p><h2>Cores do Sertão</h2></div>
-        </div>
-        <p class="desc">Telas a óleo que retratam a paisagem e o povo do semiárido nordestino.</p>
-        <div class="mosaico">
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/cores_do_sertao.jpg" alt="Capa da exposição Cores do Sertão" loading="lazy">
-            <figcaption><b>Capa: Cores do Sertão</b><span>Rafael Nogueira</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/mandacaru.jpg" alt="Mandacaru" loading="lazy">
-            <figcaption><b>Mandacaru</b><span>Cores do Sertão</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/estrada_de_terra.jpg" alt="Estrada de terra" loading="lazy">
-            <figcaption><b>Estrada de terra</b><span>Cores do Sertão</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/vaqueiro.jpg" alt="Vaqueiro" loading="lazy">
-            <figcaption><b>Vaqueiro</b><span>Cores do Sertão</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/flores_e_secas.jpg" alt="Seca e flor" loading="lazy">
-            <figcaption><b>Seca e flor</b><span>Cores do Sertão</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/4.jpg" alt="Mulher na feira" loading="lazy">
-            <figcaption><b>Mulher na feira</b><span>Cores do Sertão</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPOSIÇÃO 3: Matéria Viva ===== -->
-    <section class="bloco" id="exposicao-3">
-      <div class="wrap">
-        <div class="cab">
-          <div><p class="eyebrow">Escultura · Coletivo Barro</p><h2>Matéria Viva</h2></div>
-        </div>
-        <p class="desc">Esculturas em cerâmica e metal que dialogam com o espaço aberto do pátio.</p>
-        <div class="mosaico">
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/materia_viva.jpg" alt="Capa da exposição Matéria Viva" loading="lazy">
-            <figcaption><b>Capa: Matéria Viva</b><span>Coletivo Barro</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/raiz.jpg" alt="Raiz" loading="lazy">
-            <figcaption><b>Raiz</b><span>Matéria Viva</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/torso.jpg" alt="Torso de barro" loading="lazy">
-            <figcaption><b>Torso de barro</b><span>Matéria Viva</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/arco.jpg" alt="Arco" loading="lazy">
-            <figcaption><b>Arco</b><span>Matéria Viva</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/forma_e_vazio.jpg" alt="Fôrma e vazio" loading="lazy">
-            <figcaption><b>Fôrma e vazio</b><span>Matéria Viva</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/5.jpg" alt="Moldura de ferro" loading="lazy">
-            <figcaption><b>Moldura de ferro</b><span>Matéria Viva</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPOSIÇÃO 4: Pixels e Pigmentos ===== -->
-    <section class="bloco" id="exposicao-4">
-      <div class="wrap">
-        <div class="cab">
-          <div><p class="eyebrow">Arte Digital · Julia Andrade</p><h2>Pixels e Pigmentos</h2></div>
-        </div>
-        <p class="desc">Obras digitais e instalações interativas na fronteira entre tela e tinta.</p>
-        <div class="mosaico">
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/pixels_e_pigmentos.jpg" alt="Capa da exposição Pixels e Pigmentos" loading="lazy">
-            <figcaption><b>Capa: Pixels e Pigmentos</b><span>Julia Andrade</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/glitch_azul.jpg" alt="Glitch azul" loading="lazy">
-            <figcaption><b>Glitch azul</b><span>Pixels e Pigmentos</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/pixel_organico.jpg" alt="Pixel orgânico" loading="lazy">
-            <figcaption><b>Pixel orgânico</b><span>Pixels e Pigmentos</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/neon_em_aquarela.jpg" alt="Neon em aquarela" loading="lazy">
-            <figcaption><b>Neon em aquarela</b><span>Pixels e Pigmentos</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/codigo_e_pigmento.jpg" alt="Código e pigmento" loading="lazy">
-            <figcaption><b>Código e pigmento</b><span>Pixels e Pigmentos</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/1.jpg" alt="Paisagem sintética" loading="lazy">
-            <figcaption><b>Paisagem sintética</b><span>Pixels e Pigmentos</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPOSIÇÃO 5: Memória do Traço ===== -->
-    <section class="bloco" id="exposicao-5">
-      <div class="wrap">
-        <div class="cab">
-          <div><p class="eyebrow">Desenho · Carlos Mendes</p><h2>Memória do Traço</h2></div>
-        </div>
-        <p class="desc">Retrospectiva de 30 anos de desenhos a nanquim e grafite.</p>
-        <div class="mosaico">
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/memoria_do_traso.jpg" alt="Capa da exposição Memória do Traço" loading="lazy">
-            <figcaption><b>Capa: Memória do Traço</b><span>Carlos Mendes</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/auto_retrato_a_nanquim.jpg" alt="Autorretrato a nanquim" loading="lazy">
-            <figcaption><b>Autorretrato a nanquim</b><span>Memória do Traço</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/maos.jpg" alt="Mãos" loading="lazy">
-            <figcaption><b>Mãos</b><span>Memória do Traço</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/cidade_em_grafite.jpg" alt="Cidade em grafite" loading="lazy">
-            <figcaption><b>Cidade em grafite</b><span>Memória do Traço</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/estudo_de_panos.jpg" alt="Estudo de panos" loading="lazy">
-            <figcaption><b>Estudo de panos</b><span>Memória do Traço</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/2.jpg" alt="Perfil a lápis" loading="lazy">
-            <figcaption><b>Perfil a lápis</b><span>Memória do Traço</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPOSIÇÃO 6: Entre Fios ===== -->
-    <section class="bloco" id="exposicao-6">
-      <div class="wrap">
-        <div class="cab">
-          <div><p class="eyebrow">Instalação · Ateliê Trama</p><h2>Entre Fios</h2></div>
-        </div>
-        <p class="desc">Instalação têxtil imersiva feita com fibras naturais e tingimento artesanal.</p>
-        <div class="mosaico">
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/entre_fios.jpg" alt="Capa da exposição Entre Fios" loading="lazy">
-            <figcaption><b>Capa: Entre Fios</b><span>Ateliê Trama</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/trama_vermelha.jpg" alt="Trama vermelha" loading="lazy">
-            <figcaption><b>Trama vermelha</b><span>Entre Fios</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/trama_vermelha.jpg" alt="Cortina de fibras" loading="lazy">
-            <figcaption><b>Cortina de fibras</b><span>Entre Fios</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/tingimento_natural.jpg" alt="Tingimento natural" loading="lazy">
-            <figcaption><b>Tingimento natural</b><span>Entre Fios</span></figcaption>
-          </figure>
-          <figure class="obra">
-            <img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/fio_solto.jpg" alt="Fio solto" loading="lazy">
-            <figcaption><b>Fio solto</b><span>Entre Fios</span></figcaption>
-          </figure>
+        <div class="cards">
+          <a class="card" href="luz-e-sombra.html">
+            <div class="foto"><img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/luz_e_sombra.jpg" alt="Capa da exposição Luz e Sombra" loading="lazy"></div>
+            <div class="txt">
+              <p class="eyebrow">Fotografia · Marina Teixeira</p>
+              <h3>Luz e Sombra</h3>
+              <p>Ensaio fotográfico sobre o contraste urbano em São Paulo ao longo de um ano.</p>
+              <span class="mais">Ver exposição →</span>
+            </div>
+          </a>
+          <a class="card" href="cores-do-sertao.html">
+            <div class="foto"><img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/cores_do_sertao.jpg" alt="Capa da exposição Cores do Sertão" loading="lazy"></div>
+            <div class="txt">
+              <p class="eyebrow">Pintura · Rafael Nogueira</p>
+              <h3>Cores do Sertão</h3>
+              <p>Telas a óleo que retratam a paisagem e o povo do semiárido nordestino.</p>
+              <span class="mais">Ver exposição →</span>
+            </div>
+          </a>
+          <a class="card" href="materia-viva.html">
+            <div class="foto"><img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/materia_viva.jpg" alt="Capa da exposição Matéria Viva" loading="lazy"></div>
+            <div class="txt">
+              <p class="eyebrow">Escultura · Coletivo Barro</p>
+              <h3>Matéria Viva</h3>
+              <p>Esculturas em cerâmica e metal que dialogam com o espaço aberto do pátio.</p>
+              <span class="mais">Ver exposição →</span>
+            </div>
+          </a>
+          <a class="card" href="pixels-e-pigmentos.html">
+            <div class="foto"><img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/pixels_e_pigmentos.jpg" alt="Capa da exposição Pixels e Pigmentos" loading="lazy"></div>
+            <div class="txt">
+              <p class="eyebrow">Arte Digital · Julia Andrade</p>
+              <h3>Pixels e Pigmentos</h3>
+              <p>Obras digitais e instalações interativas na fronteira entre tela e tinta.</p>
+              <span class="mais">Ver exposição →</span>
+            </div>
+          </a>
+          <a class="card" href="memoria-do-traco.html">
+            <div class="foto"><img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/memoria_do_traso.jpg" alt="Capa da exposição Memória do Traço" loading="lazy"></div>
+            <div class="txt">
+              <p class="eyebrow">Desenho · Carlos Mendes</p>
+              <h3>Memória do Traço</h3>
+              <p>Retrospectiva de 30 anos de desenhos a nanquim e grafite.</p>
+              <span class="mais">Ver exposição →</span>
+            </div>
+          </a>
+          <a class="card" href="entre-fios.html">
+            <div class="foto"><img src="https://conuv-bryan-arthur-bucket.s3.us-east-2.amazonaws.com/S3/entre_fios.jpg" alt="Capa da exposição Entre Fios" loading="lazy"></div>
+            <div class="txt">
+              <p class="eyebrow">Instalação · Ateliê Trama</p>
+              <h3>Entre Fios</h3>
+              <p>Instalação têxtil imersiva feita com fibras naturais e tingimento artesanal.</p>
+              <span class="mais">Ver exposição →</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -266,5 +120,6 @@
     <div class="wrap"><span>© 2026 Galeria Atlas</span><span>Projeto CONUV · UniSENAI SP</span></div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
